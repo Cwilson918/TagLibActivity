@@ -26,18 +26,23 @@ public class HelloWorldTag extends SimpleTagSupport {
 
         Calendar time = Calendar.getInstance();
         int hourOfDay = time.get(Calendar.HOUR_OF_DAY);
+        String greeting = greetingMessage(hourOfDay);
 
         if (todayFormatDate.equals("2016/10/31")) {
             out.println("Happy Halloween!");
         } else {
-            if (hourOfDay < 12) {
-                out.println("Good Morning!");
+            out.println(greeting);
+        }
+    }
+
+    public String greetingMessage(int hourOfDay) {
+        if (hourOfDay < 12) {
+            return "Good Morning!";
+        } else {
+            if (hourOfDay < 18) {
+                return "Good Afternoon!";
             } else {
-                if (hourOfDay < 14) {
-                    out.println("Good Afternoon!");
-                } else {
-                    out.println("Good Evening!");
-                }
+                return "Good Evening!";
             }
         }
     }
