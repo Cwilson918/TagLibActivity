@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="TagLibActivityConsumer:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="taglibactivityconsumer.war">
+      <element id="artifact" artifact-name="TagLibActivityConsumer:war exploded" />
+    </root>
+  </artifact>
+</component>
